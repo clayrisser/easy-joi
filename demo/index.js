@@ -4,7 +4,7 @@ import validate, { isValid } from '../src';
 async function isEmail(email) {
   const schema = joi.string().email();
   console.log(await isValid(email, schema));
-  console.log(await validate(email, schema));
+  console.log(await validate(email, schema, 'email'));
 }
 
 async function main() {
