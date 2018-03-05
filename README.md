@@ -31,11 +31,14 @@ npm install --save easy-joi
 ## Usage
 
 ```sh
-import { isValid } from 'easy-joi';
+import validate, { isValid } from 'easy-joi';
 
 async function() {
-  const email = 'email@example.com';
-  console.log(await isValid(email, joi.string().email()));
+  console.log(await isValid('email@example.com', joi.string().email())); // true
+  console.log(await isValid('i am not an email', joi.string().email())); // false
+  
+  console.log(await validate('email@example.com', joi.string().email())); // email@example.com
+  console.log(await validate('i am not an email', joi.string().email())); // throw error
 }();
 ```
 
