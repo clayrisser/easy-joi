@@ -37,8 +37,8 @@ async function() {
   console.log(await isValid('email@example.com', joi.string().email())); // true
   console.log(await isValid('i am not an email', joi.string().email())); // false
   
-  console.log(await validate('email@example.com', joi.string().email())); // email@example.com
-  console.log(await validate('i am not an email', joi.string().email())); // throw error
+  console.log(await validate('email@example.com', joi.string().email(), 'email')); // email@example.com
+  console.log(await validate('i am not an email', joi.string().email(), 'email')); // throw error
 }();
 ```
 
