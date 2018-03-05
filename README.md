@@ -25,7 +25,7 @@ npm install --save easy-joi
 ## Dependencies
 
 * [NodeJS](https://nodejs.org)
-* [Joi](https://joi.io)
+* [Joi](https://github.com/hapijs/joi)
 
 
 ## Usage
